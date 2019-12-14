@@ -1,3 +1,4 @@
-output.json
+output.data
 node_modules
 .vscode
+dist
