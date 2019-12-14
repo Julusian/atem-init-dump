@@ -2,26 +2,21 @@
 # yarn lockfile v1
 
 
-"@types/retry@^0.12.0":
-  version "0.12.0"
-  resolved "https://registry.yarnpkg.com/@types/retry/-/retry-0.12.0.tgz#2b35eccfcee7d38cd72ad99232fbd58bffb3c84d"
-  integrity sha512-wWKOClTTiizcZhXnPY4wikVAwmdYHp8q6DmC+EJUzAMsycb7HB32Kh9RN4+0gExjmPmZSAQjgURXIGATPegAvA==
+"@julusian-test/atem-connection@^2.0.0-113.0":
+  version "2.0.0-113.0"
+  resolved "https://registry.yarnpkg.com/@julusian-test/atem-connection/-/atem-connection-2.0.0-113.0.tgz#ebfcc48af53ccea3ceca7e756c58af03553e7d47"
+  integrity sha512-N5aHbGsdV1genoI/1QKH3s1MBBgcas5dniPahY4qidnfj9orUAIqzwvxxq6TAI46PMYsLt0PdbF8ZVMnj0jfGQ==
+  dependencies:
+    exit-hook "^2.0.0"
+    nanotimer "^0.3.15"
+    threadedclass "https://github.com/Julusian/threadedClass.git#dist/feat/node12-types"
+    tslib "^1.10.0"
+    wavefile "^8.4.4"
 
 alawmulaw@^5.0.2:
   version "5.0.2"
   resolved "https://registry.yarnpkg.com/alawmulaw/-/alawmulaw-5.0.2.tgz#885a914933e3f3bc0bdd67534af669a20f17d4aa"
   integrity sha512-W3bWBB7MwTNGALlAKbOxe+tMNW9DpqGsv1V1idGPzctnBH++eS+Dx3UuucHNe5nk38WvAuy0sgMAbS5idHCArw==
-
-atem-connection@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/atem-connection/-/atem-connection-1.2.0.tgz#b119f96f2a1d595fe8c503723ced728a6567b8e0"
-  integrity sha512-c2yChOGu+oX2kFHLaUYk2yT63FxyKequ6tCUwHItMl3qxNV+SwmrUTk0c+MQ0sWQ2ksFKs1GJXoKei7XC7BS3Q==
-  dependencies:
-    exit-hook "^2.0.0"
-    nanotimer "^0.3.15"
-    p-retry "^4.1.0"
-    tslib "^1.9.0"
-    wavefile "^8.4.4"
 
 base64-arraybuffer-es6@^0.3.1:
   version "0.3.1"
@@ -43,6 +38,11 @@ byte-data@^16.0.3:
     twos-complement-buffer "0.0.1"
     uint-buffer "^0.1.0"
     utf8-buffer "^0.2.0"
+
+callsites@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/callsites/-/callsites-3.1.0.tgz#b3630abd8943432f54b3f0519238e33cd7df2f73"
+  integrity sha512-P8BjAsXvZS+VIDUI11hHCQEv74YT67YUi5JJFNWIqL235sBmjX4+qx9Muvls5ivyNENctx46xQLQ3aTuE7ssaQ==
 
 endianness@^8.0.2:
   version "8.0.2"
@@ -69,20 +69,14 @@ nanotimer@^0.3.15:
   resolved "https://registry.yarnpkg.com/nanotimer/-/nanotimer-0.3.15.tgz#280d277db9146eca6f8a570b572abaf2a9acc754"
   integrity sha1-KA0nfbkUbspvilcLVyq68qmsx1Q=
 
-p-retry@^4.1.0:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/p-retry/-/p-retry-4.2.0.tgz#ea9066c6b44f23cab4cd42f6147cdbbc6604da5d"
-  integrity sha512-jPH38/MRh263KKcq0wBNOGFJbm+U6784RilTmHjB/HM9kH9V8WlCpVUcdOmip9cjXOh6MxZ5yk1z2SjDUJfWmA==
+"threadedclass@https://github.com/Julusian/threadedClass.git#dist/feat/node12-types":
+  version "0.0.0-develop"
+  resolved "https://github.com/Julusian/threadedClass.git#9a40b3357db293b8a8429526a4bf7d8d4de8a10f"
   dependencies:
-    "@types/retry" "^0.12.0"
-    retry "^0.12.0"
+    callsites "^3.1.0"
+    tslib "^1.9.3"
 
-retry@^0.12.0:
-  version "0.12.0"
-  resolved "https://registry.yarnpkg.com/retry/-/retry-0.12.0.tgz#1b42a6266a21f07421d1b0b54b7dc167b01c013b"
-  integrity sha1-G0KmJmoh8HQh0bC1S33BZ7AcATs=
-
-tslib@^1.9.0:
+tslib@^1.10.0, tslib@^1.9.3:
   version "1.10.0"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.10.0.tgz#c3c19f95973fb0a62973fb09d90d961ee43e5c8a"
   integrity sha512-qOebF53frne81cf0S9B41ByenJ3/IuH8yJKngAX35CmiZySA0khhkovshKK+jGCaMnVomla7gVlIcc3EvKPbTQ==
