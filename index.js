@@ -1,6 +1,6 @@
-import { writeFileSync } from 'fs'
-import { AtemSocket } from 'atem-connection/dist/lib/atemSocket'
-import { DEFAULT_PORT } from 'atem-connection'
+const fs = require('fs')
+const { AtemSocket } = require('atem-connection/dist/lib/atemSocket')
+const { DEFAULT_PORT } = require('atem-connection')
 
 if (process.argv.length < 3) {
     console.error('Missing address parameter')
@@ -22,19 +22,19 @@ socket.on('disconnect', () => {
 })
 
 
-const output: string[] = []
+const output = []
 
 socket.on('commandsReceived', cmds => {
     const initComplete = cmds.find(cmd => cmd.constructor.name === 'InitCompleteCommand')
     if (initComplete) {
         console.log('complete')
-        writeFileSync('output.data', output.join('\n'))
+        fs.writeFileSync('output.data', output.join('\n'))
         process.exit(0)
     }
 })
 
-const origParse = ((socket as any)._parseCommands).bind(socket)
-;(socket as any)._parseCommands = (payload: Buffer) => {
+const origParse = (socket._parseCommands).bind(socket)
+socket._parseCommands = (payload) => {
     output.push(payload.toString('hex'))
     return origParse(payload)
 }

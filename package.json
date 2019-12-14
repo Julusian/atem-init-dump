@@ -7,15 +7,6 @@
     "atem-connection": "^1.2.0"
   },
   "scripts": {
-    "start": "ts-node src/index.ts",
-    "watch": "nodemon -r ts-node/register src/index.ts",
-    "build": "trash dist && tsc"
-  },
-  "devDependencies": {
-    "@types/node": "^12.12.17",
-    "nodemon": "^2.0.2",
-    "trash-cli": "^3.0.0",
-    "ts-node": "^8.5.4",
-    "typescript": "^3.7.3"
+    "start": "node index.js"
   }
 }
